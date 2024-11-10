@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0%;
+}
+
+/*navbar style*/
+.navbar{
+    border: 1px solid black;
+    border-radius: 20px;
+    /* background-color: rgb(92, 196, 147); */
+    /* background-color: black; */
+
+}
+.navbar-nav {
+    margin: 0.2rem 3rem;
+    display: flex;
+}
+.navbar-nav a{
+    margin: .2rem 3.3rem;
+    font-size: 1.7rem;
+    color: rgb(114, 85, 32);
+}
+.navbar-log{
+    margin: 1rem 5rem;
+    display: flex;
+}
+.navbar-log a{
+    margin: 1rem 2.5rem;
+    font-size: 1.6rem;
+    color:  rgb(114, 85, 32);
+}
+a:hover{
+    /* color: rgb(88, 182, 37); */
+    box-shadow: .5rem 1rem 1rem rgb(212, 95, 5);
+}
+.navbar-brand img{
+    width: 5rem;
+    height: 4rem;
+}
+
+/*MAIN - POST*/
+#main{
+    height: 34rem;
+    /* border: 5px solid pink; */
+    /* border-radius: 10px 100px ; */
+    /* background-color: papayawhip; */
+    margin: .5rem 0 .5rem 2rem;
+    display: flex;
+}
+#main img{
+    height: 34rem;
+    width: 50rem;
+    border-radius: 1rem 3rem 2rem 4rem;
+    margin: .3rem 0 0 2rem;
+}
+.main-content{
+    /* border: 2px solid yellowgreen; */
+    width: 35rem;
+    margin: .5rem 0 0 2rem;
+}
+.main-content p{
+    font-size: 1.7rem;
+    justify-content: center;
+    
+}
+
+/*CARD-STYLE*/
+#card{
+    /* border: 5px solid blue; */
+    width: 95rem;
+    display: flex;
+}
+.card,.card1{
+    margin: 2rem 5rem; 
+    box-shadow: .5rem 1rem .5rem blanchedalmond;
+}
+#card1{
+    /* border: 5px solid green; */
+    width: 95rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card1:hover,.card:hover{
+    width: 18rem;
+    height: 30rem;
+    box-shadow: 3px 4px 5px red;
+}
+.card-body{
+    margin: 1rem 2rem ;
+}
+
+/*CATEGORY BUTTON STYLE*/
+.dropdown-menu{
+    margin: 1rem 1rem;
+}
+
+
+/* FOOTER */
+.footer{
+    background-color: black;
+    color: white;
+}
+.card-footer{
+    color: white;
+}
+.foot{
+    display: flex;
+    margin: 1rem 2rem 1rem 8rem;
+}
+.footer-Media,.footer-contact,.footer-About,.footer-Help{
+    /* border: 2px solid red; */
+    width: 17rem;
+    margin: .3rem 0 0rem 2rem;
+}
+.contact-data{
+    margin: 1.5rem 0 0 0;
+    padding: 1rem 0 0 0;
+    display: grid;
+    gap: 1rem;
+}
+
+ .contact-data a:hover{
+    cursor: pointer;
+    background-color: black;
+    box-shadow: none;
+ }

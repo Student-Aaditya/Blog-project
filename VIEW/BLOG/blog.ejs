@@ -1,0 +1,187 @@
+<% layout("/INCLUDE/boilerplate")%>
+    <style>
+        .delete {
+            text-decoration: underline;
+            background-color: honeydew;
+        }
+
+        .card {
+            margin: 5rem 2rem 0 4.5rem;
+        }
+
+        .card-body {
+            margin: 1rem;
+        }
+
+        .row {
+            display: flex;
+            margin: 0 0 3rem 0;
+        }
+
+        .divs {
+            display: flex;
+            margin: 1rem 0 0 2rem;
+        }
+
+        #filters-tag {
+            display: flex;
+
+        }
+
+        #filters {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 1.5rem 0 0 7rem;
+            font-size: 1.8rem;
+        }
+
+        #filters i {
+            color: black;
+            background-color: whitesmoke;
+            border-radius: 50%;
+
+        }
+        a {
+            text-decoration: none;
+        }
+    
+        body{
+            background-image: url("b1.jpg");
+            max-width: 100%;
+            animation-name: blog;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes blog {
+            0%{background-image: url("b1.jpg"); }
+            25%{background-image: url("blogs.jpg");}
+            50%{background-image: url("amil.jpeg");}
+            
+        }
+         #filters span{
+            color: black;
+            filter: drop-shadow(5px 5px 3px white);
+            animation-name: name;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes name {
+            0%{color: black;}
+            25%{color: red;}
+            50%{color: rgb(41, 3, 41);}
+            
+        }
+    </style>
+    <div id="filters-tag">
+        <div id="filters">
+            <div class="filter-gen">
+               
+                    <i class="fa-solid fa-book"></i>
+                    <a href="/gen">
+                <span>General</span>
+                </a>
+                <%if(user && user._id.equals('6713efbe4df36970adfd49cc')){%>
+                    <div class="create">
+                        <a href="/gen/new">
+                            <button>CREATE</button>
+                        </a>
+    
+                    </div>
+                    <%}%>
+            </div>
+
+        </div>
+        <div id="filters">
+            <div class="filter-tech">
+                <i class="fa-solid fa-globe"></i>
+                <a href="/tech">
+                    <span>Tech</span>
+                </a>
+               
+                <%if(user && user._id.equals('6713efbe4df36970adfd49cc')){%>
+                    <div class="create">
+                        <a href="/tech/new">
+                            <button>CREATE</button>
+                        </a>
+    
+                    </div>
+                    <%}%>
+            </div>
+
+        </div>
+        <div id="filters">
+            <div class="filter-mot">
+                <i class="fa-solid fa-sun"></i>
+                <a href="/motive">
+                    <span>Motivation</span>
+                </a>
+                
+                <%if(user && user._id.equals('6713efbe4df36970adfd49cc')){%>
+                    <div class="create">
+                        <a href="/motive/new">
+                            <button>CREATE</button>
+                        </a>
+    
+                    </div>
+                    <%}%>
+            </div>
+        </div>
+        <div id="filters">
+            <div class="filter-nat">
+                <i class="fa-solid fa-tree"></i>
+                <a href="/nat">
+                    <span>Nature</span>
+                </a>
+               
+                <%if(user && user._id.equals('6713efbe4df36970adfd49cc')){%>
+                    <div class="create">
+                        <a href="/nat/new">
+                            <button>CREATE</button>
+                        </a>
+    
+                    </div>
+                    <%}%>
+            </div>
+        </div>
+        <div id="filters">
+            <div class="filter-cric">
+                <i class="fa-solid fa-baseball-bat-ball"></i>
+                <a href="/cric">
+                    <span>Sports</span>
+                </a>
+               
+                <%if(user && user._id.equals('6713efbe4df36970adfd49cc')){%>
+                <div class="create">
+                    <a href="/cric/new">
+                        <button>CREATE</button>
+                    </a>
+
+                </div>
+                <%}%>
+            </div>
+        </div>
+    </div>
+    <div class="row ">
+
+        <%for(let b of Blog){%>
+            <div class="card" style="width: 20rem; height: 28rem;  ">
+                <img src="<%=b.Image.url%>" class="card-img-top " alt="network issue"
+                    style="width: 15rem; height: 13rem;">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%=b.Title%>
+                    </h5>
+                    <p class="card-text">
+                        <%=b.Content1%>
+                    </p>
+
+                    <a href="/blog/<%=b._id%>" class="btn btn-primary">READ</a>
+                </div>
+                <%if(user && user._id.equals('6713efbe4df36970adfd49cc')){%>
+                    <form method="POST" action="/blog/<%=b._id%>?_method=Delete">
+                        <button>Delete</button>
+                    </form>
+                    <%}%>
+            </div>
+            <%}%>
+    </div>

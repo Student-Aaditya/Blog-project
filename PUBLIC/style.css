@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0%;
+}
+
+/*navbar style*/
+
+.navbar{
+    border: 1px solid black;
+    border-radius: 20px;
+}
+@media only screen and (max-width: 500px)  {
+    /* Styles for portrait phones */
+    .navbar{
+        border: 1px solid black;
+    }
+}
+@media only screen and (min-width:767px) and (max-width: 1024px)  {
+    /* Styles for portrait phones */
+    .navbar{
+        border: 1rem solid rgb(106, 47, 165);
+    }
+}
+.navbar-nav {
+    margin: 0.2rem 3rem;
+    display: flex;
+}
+
+.navbar-nav a{
+    margin: .2rem 3.3rem;
+    font-size: 1.6rem;
+    color: rgb(114, 85, 32);
+    
+}
+.navbar-log{
+    margin: 1rem 5rem;
+    display: flex;
+}
+.navbar-log a{
+    margin: 1rem 2.5rem;
+    font-size: 1.6rem;
+    color:  rgb(114, 85, 32);
+}
+.navbar-log a:hover{
+    box-shadow: .5rem 1rem 1rem rgb(212, 95, 5);
+    border-radius: 2.5rem;
+    color: blue;
+}
+.navbar-nav a:hover{
+    box-shadow: .5rem 1rem 1rem rgb(212, 95, 5);
+    border-radius: 2.5rem;
+    color: blue;
+    
+}
+.navbar-brand img{
+    width: 5rem;
+    height: 4rem;
+}
+
+/*MAIN - POST*/
+#main{
+    height: 34rem;
+    margin: .5rem 0 .5rem 2rem;
+    display: flex;
+}
+.img {
+    height: 34rem;
+    width: 52rem;
+    border-radius: 3rem 3rem 2rem  4rem;
+    margin: .3rem 0 0 2rem;
+    
+    animation-name: img;
+    animation-duration: 20s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    background-image: url("b1s.jpg");
+    background-repeat: no-repeat;
+   
+}
+@keyframes img {
+    0%   {background-image: url("b1s.jpg");}
+    25%  {background-image: url("motives.jpg");}
+    50%  {background-image: url("blogs.jpg");}
+    75%  {background-image: url("b3s.jpg");}
+    100% {background-image: url("b2s.jpg");}
+  
+}
+
+.main-content{
+    width: 35rem;
+    margin: .5rem 0 0 2rem;
+}
+.main-content p{
+    font-size: 1.7rem;
+    justify-content: center;
+    
+}
+@media only screen and (max-width: 600px){
+    #main{
+        display: inline-block;
+        margin: 1rem 0 0 1rem;
+    }
+    .img {
+        height: 34rem;
+        width: 30rem;
+        border-radius: 1rem 3rem 2rem 4rem;
+        margin: .3rem 0 0 0rem;
+        animation-name: img;
+        animation-duration: 20s;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        background-image: url("b1ss.png");
+        background-repeat: no-repeat;
+       
+    }
+    .main-content{
+        width: 30rem;
+        margin: 1rem 0 0 0;
+    }
+    .main-content p{
+        font-size: 1.1rem;
+    }
+}
+
+/*CARD-STYLE*/
+#card{
+    width: 95rem;
+    display: flex;
+}
+
+.card,.card1{
+    margin: 2rem 5rem; 
+    box-shadow: .5rem 1rem .5rem blanchedalmond;
+}
+#card1{
+    width: 95rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card1:hover,.card:hover{
+    width: 18rem;
+    height: 30rem;
+    box-shadow: 3px 4px 5px red;
+}
+.card-body{
+    margin: 1rem 2rem ;
+}
+@media only screen and (max-width: 600px) {
+    #card,#card1{
+        display: inline-block;
+        width: 30rem;
+
+    }
+}
+
+/*CATEGORY BUTTON STYLE*/
+.dropdown-menu{
+    margin: 1rem 1rem;
+}
+
+
+/* FOOTER */
+.footer{
+    background-color: black;
+    color: white;
+}
+.card-footer{
+    color: white;
+}
+.foot{
+    display: flex;
+    margin: 1rem 2rem 1rem 8rem;
+}
+.footer-Media,.footer-contact,.footer-About,.footer-Help{
+    /* border: 2px solid red; */
+    width: 17rem;
+    margin: .3rem 0 0rem 2rem;
+}
+.contact-data{
+    margin: 1.5rem 0 0 0;
+    padding: 1rem 0 0 0;
+    display: grid;
+    gap: 1rem;
+}
+
+ .contact-data a:hover{
+    cursor: pointer;
+    background-color: black;
+    box-shadow: none;
+ }
+ .paragraph{
+    color: rgb(0, 255, 106);
+    background-color:white;
+    font-size: 2rem;
+    margin: .5rem 0 0 20rem;
+ }
+ @media only screen and (max-width: 600px){
+    .foot{
+        margin: 1rem 0 0 0;
+    }
+    .paragraph{
+        margin: 1rem 0 0 0;
+    }
+    .footer-Media,.footer-contact,.footer-About,.footer-Help{
+        margin: .5rem 0 0 0;
+    }
+    .contact-data{
+        padding: none;
+    }
+ }

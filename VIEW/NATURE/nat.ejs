@@ -1,0 +1,53 @@
+<% layout("/INCLUDE/boilerplate")%>
+<style>
+    .delete {
+        text-decoration: underline;
+        background-color: honeydew;
+    }
+
+    .card {
+        margin: 5rem 2rem 0 4.5rem;
+    }
+
+    .card-body {
+        margin: 1rem;
+    }
+
+    .row {
+        display: flex;
+        margin: 0 0 3rem 0;
+    }
+    body{
+        background-image: url("n.jpg");
+        background-repeat: repeat;
+    }
+    h1{
+        color: darkgreen;
+        filter: drop-shadow(5px 5px 3px yellow);
+    }
+</style>
+<h1>
+    NATURE BLOGS
+</h1>
+<div class="row">
+<%for(let N of nat){%>
+    <div class="card" style="width: 20rem; height: 28rem;  ">
+        <img src="<%=N.Image.url%>" class="card-img-top " alt="network issue" style="width: 15rem; height: 13rem;">
+        <div class="card-body">
+            <h5 class="card-title">
+                <%=N.Title%>
+            </h5>
+            <p class="card-text">
+                <%=N.Content1%>
+            </p>
+
+            <a href="/nat/<%=N._id%>" class="btn btn-primary">READ</a>
+        </div>
+        
+            <form method="POST" action="/nat/<%=N._id%>?_method=Delete">
+                <button>Delete</button>
+            </form>
+          
+    </div>
+    <%}%>
+</div>

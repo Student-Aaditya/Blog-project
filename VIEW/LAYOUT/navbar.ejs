@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top ">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="572.png" ></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link " href="/home">Home</a>
+                <a class="nav-link" href="/library">About us</a>
+                <a class="nav-link" href="/blog">Blog</a>
+                <a class="nav-link " href="/blog/new" role="button">
+                  Category
+                </a>
+                <!-- <span>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">TECH</a></li>
+                  <li><a class="dropdown-item" href="#">CURRENT AFFAIRS</a></li>
+                  
+                </ul>
+              </span> -->
+
+            </div>
+            <div class="navbar-log ms-auto"  >
+                <!-- <a class="nav-link" href="/sign">Sign-up</a> -->
+                <%if(!user){%>
+                  <a class="nav-link " href="/sign">Sign-Up</a>
+                  <a class="nav-link " href="/login">Log-In</a>
+                   <%}%>
+                   <%if(user){%>
+                  <a class="nav-link " href="/logout">Log-Out</a>
+                  <%}%>
+            </div>
+            
+    </div>
+    
+</div>
+</nav>

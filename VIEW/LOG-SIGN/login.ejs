@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign -Up</title>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+   crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body{
+        background-image: url("blogs.jpg");
+        background-size: cover;
+        background-repeat:no-repeat ;
+        /* background-color: gray; */
+
+    }
+    #sign
+    {
+        border: 3px solid black;
+        border-radius: 2rem 0 1.5rem 0;
+        height:40rem;
+        width: 65%;
+        margin:1rem 0 0 18rem ;
+        display: flex;
+        justify-content: center;
+        background-color: floralwhite;
+       
+       
+    }
+    .sign{
+        border: 2px solid black;
+        border-radius: 1.5rem;
+        height:28rem;
+        width: 50%;
+        margin: 5rem 3rem 0 1rem;
+    }
+    
+    .img{
+        /* border: 2px solid rgb(119, 42, 106); */
+        height:38rem;
+        width: 80%;
+        margin: 1rem 1rem 0 1.5rem;
+    }
+    .img img{
+        height: 100%;
+        width: 100%;
+        border-radius: .5rem 2.5rem .5rem 2rem;
+
+    }
+    .email,.password{
+        /* border: 1px solid yellow; */
+        display: grid;
+        margin: 2rem 0 0 2rem;
+        font-size: 1.5rem;
+    }
+    .email,.password input{
+        width: 12rem;
+        color: rgb(11, 22, 106);
+    }
+    .form{
+        margin: 4rem 1rem 0 2.5rem;
+    }
+    .btn{
+        margin: 2rem 0 0 5rem;
+        border-radius: 5px;
+        color: wheat;
+        background-color: black;
+        align-items: center;
+        justify-content: center;
+        width: 5rem;
+        height: 2rem;
+        font-size: 1.1rem;
+    }
+    h1{
+        margin: 2rem 0 0 5rem;
+    }
+    .login{
+        margin: 2rem 3rem 0 0 ;
+    }
+    .login a{
+        color: wheat;
+    background-color: black;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    margin: 2rem 2rem 0 5rem;
+    text-decoration: none;
+    }
+
+</style>
+<body>
+      <div class="body">
+    <div id="sign">
+        <div class="img">
+            <img src="blog1.avif" alt="error">
+        </div>
+        <div class="sign">
+            <h1><i class="fa-solid fa-right-to-bracket"> LOGIN</i> </h1>
+            <form action="/login" method="POST" class="form">
+            <div class="email">
+                <label for="username">Username</label>
+                
+                <input type="text" name="username" id="Email">
+            </div>
+            <div class="password">
+                <label for="password">Password</label>
+                
+                <input type="password" name="password" id="Password">
+            </div>
+            <button class="btn">Login</button>
+            <div class="login">
+            <a href="/sign">Sign-Up</a>
+        </div>
+            </form>
+        </div>
+        
+    </div>
+    
+</div>
+</body>
+</html>

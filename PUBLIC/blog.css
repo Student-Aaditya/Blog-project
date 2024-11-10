@@ -1,0 +1,47 @@
+.Paragraph {
+    /* @media only screen and (min-width: 1200px) { */
+        /* border: 2px solid green; */
+        width: 45rem;
+        height: 26rem;
+        margin: 1rem 0 0 2rem;
+        font-size: 1.5rem;
+        text-align: justify;
+    }
+/* } */
+
+.title img {
+    height: 25rem;
+    margin: 1rem;
+}
+
+.One {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 1rem;
+    /* margin: 1rem; */
+}
+.Paragraph1{
+    /* @media only screen and (min-width: 1200px) { */
+        /* border: 2px solid green; */
+        width: 52rem;
+        height: 26rem;
+        margin: 2.5rem 2rem 0 0;
+        font-size: 1.5rem;
+        text-align: justify;
+    /* } */
+
+}
+.title1 img {
+margin:3rem 0 0 1rem;
+}
+.Two{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.written {
+    margin: 1rem;
+}
+.written span{
+    font-size: large;
+
+}

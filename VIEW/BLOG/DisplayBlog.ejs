@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+   integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+   crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0%;
+    }
+
+    /*navbar style*/
+    .navbar {
+        border: 2px solid black;
+        border-radius: 20px;
+
+    }
+
+    .navbar-nav {
+        margin: 0.2rem 3rem;
+        display: flex;
+    }
+
+    .navbar-nav a {
+        margin: .2rem 3.3rem;
+        font-size: 1.7rem;
+        color: rgb(114, 85, 32);
+    }
+
+    .navbar-log {
+        margin: 1rem 5rem;
+        display: flex;
+    }
+
+    .navbar-log a {
+        margin: 1rem 2.5rem;
+        font-size: 1.6rem;
+        color: rgb(114, 85, 32);
+    }
+
+    a:hover {
+        /* color: rgb(88, 182, 37); */
+        box-shadow: .5rem 1rem 1rem rgb(212, 95, 5);
+    }
+
+    .navbar-brand img {
+        width: 5rem;
+        height: 4rem;
+    }
+
+    /*MAIN - POST*/
+    #main {
+        height: 34rem;
+        border: 5px solid pink;
+        /* border-radius: 10px 100px ; */
+        /* background-color: papayawhip; */
+        margin: .5rem 0 .5rem 2rem;
+    }
+
+    #main img {
+        height: 34rem;
+        width: 50rem;
+    }
+
+    .footer {
+        background-color: aqua;
+    }
+
+    /*Main blog page individul*/
+    .Paragraph {
+        /* @media only screen and (min-width: 1200px) { */
+        /* border: 2px solid green; */
+        width: 40rem;
+        height: 26rem;
+        margin: 1rem 0 0 2rem;
+        font-size: 1.55rem;
+        text-align: justify;
+    }
+
+    /* } */
+
+    .title img {
+        height: 25rem;
+        margin: 1rem 0 0 4rem;
+        max-width: 37rem;
+        ;
+    }
+
+    .One {
+        display: flex;
+    flex-wrap: nowrap;
+    margin: 1rem 0 0 3rem;
+    border: 2px solid black;
+    width: 96%;
+    }
+
+    .Paragraph1 {
+        /* @media only screen and (min-width: 1200px) { */
+        /* border: 2px solid green; */
+        width: 40rem;
+        height: 26rem;
+        margin: 1rem 0 0 2rem;
+        font-size: 1.55rem;
+        text-align: justify;
+        /* } */
+
+    }
+
+    .title1 img {
+        height: 25rem;
+        margin: 1rem 0 0rem 3rem;
+        max-width: 38rem;
+        ;
+    }
+
+    .Two {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 1rem 0 0 2rem;
+    }
+
+    .Paragraph2 {
+
+        max-width: 95%;
+        height: 24rem;
+        margin: 2.5rem 0rem 0 2.5rem;
+        font-size: 1.6rem;
+        text-align: justify;
+    }
+
+    .written {
+        margin: 1rem;
+    }
+
+    .written span {
+        font-size: large;
+        background-color: palevioletred;
+
+    }
+
+    h1 {
+        margin: 1rem 0 0 3rem;
+    }
+
+    /* FOOTER */
+    .footer {
+        background-color: black;
+        color: white;
+    }
+
+    .card-footer {
+        color: white;
+    }
+
+    .foot {
+        display: flex;
+        margin: 1rem 2rem 1rem 8rem;
+    }
+
+    .footer-Media,
+    .footer-contact,
+    .footer-About,
+    .footer-Help {
+        /* border: 2px solid red; */
+        width: 17rem;
+        margin: .3rem 0 0rem 2rem;
+    }
+
+    .contact-data {
+        margin: 1.5rem 0 0 0;
+        padding: 1rem 0 0 0;
+        display: grid;
+        gap: 1rem;
+    }
+
+    .contact-data a:hover {
+        cursor: pointer;
+        background-color: black;
+    }
+
+    .content1 {
+        margin: 2rem 0 0 0;
+        ;
+    }
+
+    .login-to {
+        /* border: 2px solid green; */
+        margin: 0 10rem 0 20rem;
+        width: 50%;
+        background-color: whitesmoke;
+
+    }
+
+    .login-to h2 {
+        margin: .5rem 0 0 6rem;
+    }
+
+    .login-to a {
+        box-shadow: none;
+    }
+
+    .login-to a button {
+
+        margin: 1rem 0 0 18rem;
+
+
+    }
+
+    .login-to span h4 {
+        margin: 1rem 0 0 20rem;
+    }
+
+    .login-to span button {
+        margin: 1rem 0 0 12rem;
+    }
+
+    .log-sign {
+        display: flex;
+    }
+
+    .log-sign span a button {
+        margin: 1rem 0 0 10rem;
+        gap: 1rem;
+
+    }
+
+    .blog-option {
+        display: inline-grid;
+        /* border: 2px solid red; */
+        /* margin: 2rem 0 0 4rem; */
+        width: 6rem;
+    }
+
+    .blog-option a {
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <!-- NAVABR -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary  ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img
+                    src="https://cdn.logojoy.com/wp-content/uploads/2018/05/30164225/572.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link " href="/home" target="_blank">Home</a>
+                    <a class="nav-link" href="#" target="_blank">About us</a>
+                    <a class="nav-link" href="/blog" target="_blank">Blog</a>
+                    <a class="nav-link " href="/blog/new" role="button" target="_blank">
+                        Category
+                    </a>
+                    <!-- <span>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">TECH</a></li>
+                      <li><a class="dropdown-item" href="#">CURRENT AFFAIRS</a></li>
+                      
+                    </ul>
+                  </span> -->
+
+                </div>
+                <div class="navbar-log ms-auto">
+                    <!-- <a class="nav-link" href="/sign">Sign-up</a> -->
+                    <%if(!user){%>
+                        <a class="nav-link " href="/sign">Sign-Up</a>
+                        <a class="nav-link " href="/login">Log-In</a>
+                        <%}%>
+                            <%if(user){%>
+                                <a class="nav-link " href="/logout">Log-Out</a>
+                                <%}%>
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <h1>
+        <%=b.Title%>
+    </h1>
+    
+    <div class="One">
+        <div class="blog-option">
+            <a href=""><i class="fa-solid fa-baseball-bat-ball"></i></a>
+            <a href=""> <i class="fa-solid fa-baseball-bat-ball"></i></a>
+            <a href=""><i class="fa-solid fa-baseball-bat-ball"></i></a>
+            <a href=""><i class="fa-solid fa-baseball-bat-ball"></i></a>
+        </div>
+        <div class="title">
+
+            <img src="<%=b.Image.url%>" alt="...">
+        </div>
+        <div class="Paragraph">
+            <p>
+                <%=b.Content%>
+            </p>
+        </div>
+    </div>
+    <%if(user){%>
+
+
+        <div class="Two">
+
+            <div class="Paragraph1">
+                <p class="contnet1">
+                    <%=b.Contents%>
+                </p>
+            </div>
+
+            <div class="title1">
+                <!-- <img src="https://images.indianexpress.com/2023/10/INDIAN-CRICKET-TEAM-CROP.png" alt="...">
+              -->
+                <img src="<%=b.Image1.url%>" alt="...">
+
+            </div>
+        </div>
+
+        <div class="three">
+            <div class="Paragraph2">
+                <p class="content2">
+                    <%=b.Content2%>
+                </p>
+            </div>
+        </div>
+        <div class="written">
+            <span>Written By: <%=b.Author%></span>
+        </div>
+        <%}else { %>
+            <div class="login-to">
+
+                <div class="data">
+                    <span>
+                        <h2>To Read More About it click on! &#128071</h2>
+                    </span>
+
+                    <a href="/login" target="_blank"><button type="button" class="btn btn-success">READ
+                            MORE</button></a>
+                    <span>
+                        <h4>or </h4>
+                    </span>
+                </div>
+                <div class="log-sign">
+                    <span><a class="nav-link " href="/login" target="_blank"><button type="button"
+                                class="btn btn-outline-info">LOGIN</button></a></span>
+                    <span><a class="nav-link " href="/sign" target="_blank"><button type="button"
+                                class="btn btn-outline-info">SIGN-UP</button></a></span>
+                </div>
+            </div>
+            <%}%>
+
+
+
+                <!-- REVIEW PAGE -->
+                <div class="review">
+                    <h1>review page</h1>
+                </div>
+                <form action="">
+                    <div>
+                        <label for="Rating">Rating</label>
+                        <input type="range" min="1" max="5" id="rating">
+                    </div>
+                    <div>
+                        <label for="Comment">Rating</label>
+                        <textarea name="Comment" id="comment"></textarea>
+                    </div>
+                </form>
+
+                <!-- FOOTER -->
+                <div class="footer text-center">
+                    <div class="card-header">
+                        FOOTER
+                    </div>
+                    <div class="foot">
+                        <div class="footer-Media">
+                            <span>Follow Links</span>
+                            <div class="contact-data">
+                                <a href="https://www.instagram.com/__i.am__/"> <i
+                                        class="fa-brands fa-instagram"></i></a>
+                                <a href=""> <i class="fa-brands fa-telegram"></i></i></a>
+                                <a href=""> <i class="fa-brands fa-facebook"></i></i></a>
+                            </div>
+                        </div>
+                        <div class="footer-contact">
+                            <span>Contact</span>
+                            <div class="contact-data">
+                                <span>8130424124</span>
+                                <span>aadityakuamr518@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="footer-About">
+                            <span>About</span>
+                            <div class="contact-data">
+                                <span>Sustainability</span>
+                                <span>Privacy Policy</span>
+                                <span>Terms</span>
+                                <span>Accessibility</span>
+                            </div>
+                        </div>
+                        <div class="footer-Help">
+                            <span>Resources</span>
+                            <div class="contact-data">
+                                <span>Support</span>
+                                <span>App Directory</span>
+                                <span>Developers & API</span>
+                                <span>Partners</span>
+                                <span>Events</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer ">
+                        @Blog Blogger
+                    </div>
+                </div>
+
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
